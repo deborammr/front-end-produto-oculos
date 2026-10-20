@@ -1,0 +1,139 @@
+.steps {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 32px;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepItem + .stepItem::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--border);
+  margin-right: 4px;
+}
+
+.stepItem span {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  font-size: 0.75rem;
+}
+
+.current {
+  color: var(--text);
+}
+
+.current span,
+.complete span {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #04121c;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.plans {
+  display: grid;
+  gap: 12px;
+}
+
+.plan {
+  display: grid;
+  gap: 4px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--glass);
+  text-align: left;
+  cursor: pointer;
+}
+
+.plan small {
+  color: var(--muted);
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.selected {
+  border-color: var(--accent);
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.frames {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.review {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--glass);
+}
+
+.reviewName {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.reviewMeta {
+  color: var(--muted);
+}
+
+.quantityRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.subtotal {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+
+@media (max-width: 560px) {
+  .frames {
+    grid-template-columns: 1fr;
+  }
+  .review {
+    grid-template-columns: 1fr;
+  }
+  .steps {
+    font-size: 0.75rem;
+  }
+}

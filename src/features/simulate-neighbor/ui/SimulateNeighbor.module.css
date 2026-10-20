@@ -1,0 +1,30 @@
+.wrapper {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+}
+
+.stage {
+  position: relative;
+  width: min(560px, 100%);
+}
+
+.stage::before {
+  content: '';
+  position: absolute;
+  inset: 10% 5%;
+  z-index: -1;
+  background: radial-gradient(closest-side, rgba(56, 189, 248, 0.22), rgba(168, 85, 247, 0.12) 60%, transparent);
+  filter: blur(30px);
+}
+
+.status {
+  min-height: 1.6em;
+  color: var(--muted);
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.alert {
+  color: var(--accent);
+}

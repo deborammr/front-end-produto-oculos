@@ -1,0 +1,49 @@
+.hero {
+  padding: calc(var(--header-h) + 96px) 0 120px;
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 0%, rgba(56, 189, 248, 0.14), transparent 60%), var(--bg);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.9375rem;
+  margin-bottom: 20px;
+}
+
+.title {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+}
+
+.accent {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  max-width: 680px;
+  margin: 28px auto 0;
+  color: var(--muted);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.demo {
+  margin-top: 72px;
+}

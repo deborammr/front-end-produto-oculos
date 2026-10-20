@@ -1,0 +1,29 @@
+.glasses {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(56, 189, 248, 0.25));
+  transition: filter 0.2s ease;
+}
+
+.shade {
+  fill: #000;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.shine {
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+}
+
+.dark {
+  filter: drop-shadow(0 20px 40px rgba(168, 85, 247, 0.2)) brightness(0.9);
+}
+
+.dark .shade {
+  opacity: 0.99;
+}
+
+.dark .shine {
+  opacity: 0.1;
+}

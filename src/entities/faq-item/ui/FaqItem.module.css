@@ -1,0 +1,46 @@
+.item {
+  border-bottom: 1px solid var(--border);
+}
+
+.heading {
+  margin: 0;
+  font-size: inherit;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 28px 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.chevron {
+  color: var(--accent);
+  font-size: 1.8rem;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.open .chevron {
+  transform: rotate(45deg);
+}
+
+.panel {
+  padding-bottom: 28px;
+  color: var(--muted);
+  font-size: 1.125rem;
+}

@@ -1,0 +1,10 @@
+.section {
+  padding: 120px 0;
+  background: var(--bg);
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 80px 0;
+  }
+}

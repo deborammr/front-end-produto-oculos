@@ -1,0 +1,50 @@
+.section {
+  padding: 120px 0;
+  background: var(--bg);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  text-align: center;
+}
+
+.number {
+  display: block;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  background: linear-gradient(180deg, var(--accent), transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.title {
+  margin: 16px 0 8px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  color: var(--muted);
+  font-size: 1.0625rem;
+}
+
+@media (max-width: 800px) {
+  .section {
+    padding: 80px 0;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,31 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  margin: 0;
+}
+
+.stars {
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  font-size: 1.1rem;
+}
+
+.quote {
+  flex: 1;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9375rem;
+}
+
+.author span {
+  color: var(--muted);
+}

@@ -1,0 +1,13 @@
+.card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.highlight {
+  border-color: rgba(56, 189, 248, 0.5);
+  background: linear-gradient(160deg, rgba(56, 189, 248, 0.12), rgba(168, 85, 247, 0.08));
+}
