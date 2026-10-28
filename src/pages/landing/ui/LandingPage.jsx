@@ -13,7 +13,7 @@ export function LandingPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="conteudo-principal" tabIndex="-1">
         <Hero />
         <Benefits />
         <HowItWorks />

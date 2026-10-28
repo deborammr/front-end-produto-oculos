@@ -8,7 +8,9 @@ export function App() {
   return (
     <CartProvider>
       <PurchaseProvider>
-        <LandingPage />
+        <div id="app-content">
+          <LandingPage />
+        </div>
         <CartDrawer />
         <CheckoutModal />
       </PurchaseProvider>

@@ -7,7 +7,7 @@ export function CartDrawer() {
   const empty = items.length === 0
 
   return (
-    <Drawer open={panel === 'cart'} onClose={closePanel} title="Seu carrinho">
+    <Drawer id="cart-drawer" open={panel === 'cart'} onClose={closePanel} title="Seu carrinho">
       {empty ? (
         <div className={styles.empty}>
           <p className={styles.emptyTitle}>Seu carrinho está vazio.</p>

@@ -26,6 +26,8 @@ function CheckoutContent() {
   const [email, setEmail] = useState('')
   const [touched, setTouched] = useState(false)
   const [order, setOrder] = useState(null)
+  const nameErrorId = 'checkout-name-error'
+  const emailErrorId = 'checkout-email-error'
 
   const nameValid = name.trim().length >= 2
   const emailValid = EMAIL_RE.test(email)
@@ -40,7 +42,7 @@ function CheckoutContent() {
 
   if (order) {
     return (
-      <div className={styles.success}>
+      <div className={styles.success} role="status" aria-live="polite">
         <div className={styles.check} aria-hidden="true">
           ✓
         </div>
@@ -76,13 +78,36 @@ function CheckoutContent() {
       </div>
       <label className={styles.field}>
         Nome
-        <input value={name} onChange={(e) => setName(e.target.value)} autoComplete="name" />
-        {touched && !nameValid && <span className={styles.error}>Informe seu nome.</span>}
+        <input
+          id="checkout-name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          autoComplete="name"
+          aria-invalid={touched && !nameValid}
+          aria-describedby={touched && !nameValid ? nameErrorId : undefined}
+        />
+        {touched && !nameValid && (
+          <span id={nameErrorId} className={styles.error} role="alert">
+            Informe seu nome.
+          </span>
+        )}
       </label>
       <label className={styles.field}>
         E-mail
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" />
-        {touched && !emailValid && <span className={styles.error}>Informe um e-mail válido.</span>}
+        <input
+          id="checkout-email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          autoComplete="email"
+          aria-invalid={touched && !emailValid}
+          aria-describedby={touched && !emailValid ? emailErrorId : undefined}
+        />
+        {touched && !emailValid && (
+          <span id={emailErrorId} className={styles.error} role="alert">
+            Informe um e-mail válido.
+          </span>
+        )}
       </label>
       <div className={styles.actions}>
         <Button variant="ghost" onClick={openCart}>

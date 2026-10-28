@@ -17,6 +17,9 @@ export function Header() {
 
   return (
     <header className={styles.header}>
+      <a href="#conteudo-principal" className={styles.skipLink}>
+        Pular para o conteudo principal
+      </a>
       <div className={styles.inner}>
         <a href="#topo" className={styles.brand}>
           Anti-Social Spec<sup>™</sup>
