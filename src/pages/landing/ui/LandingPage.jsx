@@ -1,4 +1,5 @@
 import { Header } from '../../../widgets/header'
+import { ContactSection } from '../../../features/contact'
 import { Hero } from '../../../widgets/hero'
 import { Benefits } from '../../../widgets/benefits'
 import { HowItWorks } from '../../../widgets/how-it-works'
@@ -22,6 +23,7 @@ export function LandingPage() {
         <Pricing />
         <Faq />
         <FinalCta />
+        <ContactSection />
       </main>
       <Footer />
     </>
